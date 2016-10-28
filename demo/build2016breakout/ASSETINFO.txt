@@ -1,0 +1,4 @@
+Id nb:cid:UUID:9c7acc69-faa9-455f-828d-120d515a6878
+Name JobOutputAsset(0)_build2016breakout_Processing
+StorageAccountName yoichikajapanwest
+StorageUrl https://yoichikajapanwest.blob.core.windows.net/asset-9c7acc69-faa9-455f-828d-120d515a6878

@@ -1,0 +1,98 @@
+#!/bin/sh
+
+cwd=`dirname "$0"`
+expr "$0" : "/.*" > /dev/null || cwd=`(cd "$cwd" && pwd)`
+
+usage() {
+    C=$1
+    echo "usage: $1 [WORKFLOW] [VIDEO_FILE] [BATCH_NAME] [BATCH_WORK_DIR]"
+    echo "This program generates webvtt file from your video leveraging Azure Media Services Media Indexer and upload all dataset of extracted text and their appearing times into Azure search to make them searchable"
+    echo ""
+    echo "WORKFLOW : ALL|GEN_CC|SEARCH_UPLOAD"
+    exit 1;
+}
+
+#################################################################
+# run_gen_cc
+#################################################################
+run_gen_cc(){
+    _BATCH_NAME=$1
+    _BATCH_OUTPUT_DIR=$2
+    _VIDEO_FILE=$3
+
+    _ASSET_NAME=${_BATCH_NAME}
+    AMS_CONF_FILE=$cwd/ams.conf
+    AMSMP_INDEXER_PARAM_FILE=$cwd/media-indexer2-en.json
+    AMSMP_BASE_DIR=$cwd/../mediaprocessors/azure-media-processor-java
+    
+    echo 'Batch GEN_CC start ....'
+    cd $AMSMP_BASE_DIR
+    mvn exec:java -Dexec.args="-t 11 -a ${_ASSET_NAME} -c ${AMS_CONF_FILE} -f ${_VIDEO_FILE} -p ${AMSMP_INDEXER_PARAM_FILE} -o ${_BATCH_OUTPUT_DIR} -d true"
+
+    # rename output json file to '${_BATCH_NAME}'.json
+    ve="${_VIDEO_FILE##*/}"    # w/ extension
+    VIDEO_FILE_NAME="${ve%.*}" # w/o extension
+    INDEXER_MP_OUTPUT_FILE=${_BATCH_OUTPUT_DIR}/${VIDEO_FILE_NAME}_aud_SpReco.vtt
+    if [ ! -e ${INDEXER_MP_OUTPUT_FILE} ]
+    then
+        echo "[ERROR] no INDEXER MP Output file found: ${INDEXER_MP_OUTPUT_FILE}"
+        exit 1
+    fi
+    mv ${INDEXER_MP_OUTPUT_FILE} ${_BATCH_OUTPUT_DIR}/${_BATCH_NAME}.vtt
+
+    echo 'Batch GEN_CC Done!'
+}
+
+#################################################################
+# run_search_upload
+#################################################################
+run_search_upload() {
+    _BATCH_NAME=$1
+    _BATCH_OUTPUT_DIR=$2
+    _STT_INDEX_NAME=$3
+    echo 'Batch SEARCH_UPLOAD start ....'
+    ${cwd}/search_upload.py ${_BATCH_OUTPUT_DIR}/${_BATCH_NAME}.vtt ${_BATCH_NAME} ${_STT_INDEX_NAME}
+    echo 'Batch SEARCH_UPLOAD Done!'
+}
+
+
+#################################################################
+# main
+#################################################################
+if [ $# -ne 4 ]
+then
+    usage $0;
+fi
+
+WORKFLOW=$1
+VIDEO_FILE=$(cd $(dirname $2) && pwd)/$(basename $2)
+BATCH_NAME=$3
+BATCH_WORK_DIR=$(cd $(dirname $4) && pwd)/$(basename $4)
+STT_INDEX_NAME="stt"
+
+if [ ! -e $BATCH_WORK_DIR ]
+then
+    mkdir -p $BATCH_WORK_DIR
+fi
+
+if [ "$WORKFLOW" = "ALL" ]; then
+    {
+        run_gen_cc ${BATCH_NAME} ${BATCH_WORK_DIR} ${VIDEO_FILE}
+    } 2>&1 | tee ${BATCH_WORK_DIR}/run_gen_cc.err
+    {
+        run_search_upload ${BATCH_NAME} ${BATCH_WORK_DIR} ${STT_INDEX_NAME}
+    } 2>&1 | tee ${BATCH_WORK_DIR}/run_search_upload.err
+elif [ "$WORKFLOW" = "GEN_CC" ]; then
+    {
+        run_gen_cc ${BATCH_NAME} ${BATCH_WORK_DIR} ${VIDEO_FILE}
+    } 2>&1 | tee ${BATCH_WORK_DIR}/run_gen_cc.err
+elif [ "$WORKFLOW" = "SEARCH_UPLOAD" ]; then
+    {
+        run_search_upload ${BATCH_NAME} ${BATCH_WORK_DIR} ${STT_INDEX_NAME}
+    } 2>&1 | tee ${BATCH_WORK_DIR}/run_search_upload.err
+else
+    echo "[ERROR] Invalid workflow!!"
+    usage $0
+fi 
+
+exit 0

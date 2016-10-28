@@ -1,0 +1,112 @@
+﻿WEBVTT
+
+00:01.320 --> 00:06.950
+Hey there this is at war over here at build twenty sixteen. I'm excited to have a couple of friends on.
+
+00:07.480 --> 00:24.320
+Why don't you introduce yourself and tell us what you do well servicer I'm Sarah I worked on the node tooling in visual studio. And, yes, coat as well. Fantastic and you, Sir and my name says I work on the Bison tooling that we do a lot of Microsoft and I contribute to the core fighting project or?
+
+00:24.740 --> 00:54.630
+By some type of life and I love it. And here's the thing you were walking down past building twenty and you're like, Hey, we should have a Ah sum up. I thought we should come and talk and Shannon. I absolutely think I think I think the message that we're getting here is that Visual Studio should just now be an editor for everyone exactly. It's for a long time. Everyone's had this idea that it's all about the shop until about people's plus depending on your background. But if you look at it now. If you get Visual Studio Twenty, fifteen and you install it.
+
+00:55.060 --> 01:02.510
+Ten different languages of the supported there and so many different project types, Ah outside of you know the traditional ones, and then expect to see.
+
+01:02.860 --> 01:52.730
+I thought so let's start with node because no it is pretty cool. But it's tell us a little bit about sort of what kind of support. We have evidence here for tonight and I'm kind of cheating everybody because I've I've done stuff with Sarah and we went through a lot. I mean, it's been really cool to see that there's probably some new stuff also when we start with for the basic what do you do a visual studio without yeah, so um we actually have two two side two tooling uh experiences available right so there's Visual Studio a man. We release is actually this is our one year anniversary for no choice so it's pretty exciting and we have a bunch of you know has debugging as profiling. It has uh all the features that you expect from visual studio. We have intellisense, um and it's pretty exciting to see that all comes together and then in a fiasco.
+
+01:53.000 --> 02:23.330
+We have more lighter-weight experience, um that you know, Intel sensing debugging, So what you're saying when you're saying intellisense. We all get that yeah, when you're talking about debugging, though, is it like the regulating body that I've come to know and love. When I'm debugging Csharp app. For example, absolutely yes. See you have this talk traces. He is the watch window. The uh you have conditional breakpoint. A trade point. Uh pretty much everything there in the same is also available for Python, Islamo will get him inside.
+
+02:24.270 --> 02:29.690
+I love you too, but with no chance when you when you hit a five is it running.
+
+02:29.960 --> 02:31.910
+Node in the background, yeah, what is?
+
+02:32.270 --> 03:19.900
+It's been top node using the debug flag, um and that way where just interacting with node using their debug protocol and we're translating up that all into the language that visual studio speaks so that we can light up the same user experience there and that's awesome. Because it's not like some fake like this is fake know that we invented and then later on. We'll know you're actually running real node at the bottom of everything. It's exactly the same. But you've done is just put tooling over the top. Yeah, it's the same thing. If you go into it and you open up a command line. You can you'll see the exact same code running it friends exact same way So what if I'm what if I'm doing no stuff with typescript does that kind of work as well. Yes, absolutely all sides so javascript typescript. We had tooling for both of those that's awesome. So if I'm going to build my standard no express application.
+
+03:20.360 --> 04:02.200
+I'm gonna be typing and yeah, I'm I'm gonna be downloading stuff. I'm gonna be using runs or goal for whatever browser if I you know what all of that's the same thing. Same exact thing and it's it's funny cause people don't realize that I know like you are doing or use more interesting, which is exactly the same thing, yeah, so the same thing that the same tools that you have in the command line. They're also available in visual studio. You can actually use the command line, too, and people are always surprised when we do that when we bring up the command line in the demo, um, but that the goal isn't to to restrict you in any way or provide any sort of the factions. You you we want to make sure that you can take advantage of all the tools that are out there in the community, um that you're used to and.
+
+04:02.680 --> 04:49.550
+That we can still work with the same workflows that that you have often and so in the end. It's Visual Studio literally just doing everything you would have done it the command line. It's just doing that for you, yeah that's awesome. Alright so now we're gonna move on to python annot. Can I tell you something all of the research. I did in school ball python? Yeah implies on map clock live uh you know, those kinds of things tell us about the support for part time. Maybe not as well understood or no yeah. So so the first thing I mean, I've we've I've had been had the the birth here and build for a couple of days and probably the first question a lot of people come up and ask is is this all about ion hyphen, and it's like I want to stop in clarify. No, it's not about that six years ago, when we started. It was briefly all about nine hyphen and we very quickly saw that.
+
+04:50.100 --> 05:16.740
+Most people using safy Finan is some variation of that, so we you know, we pivoted very early on, and like the whole focuses on Seafight, then Ah. Sorry it's it's an editor right even get my pin code you debugging your profiling and sold that works with a pipe and as well as on Titan Jonathan Pipeline and all these different interpreters out there uh but it is. We all say fights and first everything that we run on Azure is running on same pipes and Ah for if you deploy any code up there.
+
+05:17.160 --> 05:41.040
+I'm twice and still exists and still a life projects community driven but it's not alcohol focus in any way. So are we with the real deal. This is the real deal with this is the price and that you want to then. Everyone's using uh in the editor that everyone wants to use. I love it. So a number of years ago. There was this thing that happened with Python, where there was like but two and then the three.
+
+05:41.460 --> 06:16.630
+Right are you talking all right, I know it doesn't feel right now. If you're on the two. It's like two seven if you're on the three. It's like three three if I remember I maybe report do wheelies support. That's what is well? Absolutely. So we're actually up to three five oh oh wow. Yeah, you fine everybody. We've got a nice new pretty one. Um, I actually put a I contributed. A lot of the work to the brand new windows installer on that, so it's been a lot of feedback and say, Oh, it's really pretty and stolen now that was a lot of work that we contributed threw me into the the um the Colpac in development team, so that was really fun to be able to work with that external project like that.
+
+06:17.080 --> 06:33.840
+Ah, but yeah, we have five three five we let you choose an use any version of life and in in your pipe and project so we support two-point-five, which is really go now. Yes, Ah through two point. Six one seven, three point over which I don't think anybody use right at all. Yeah, all the way up to three point five.
+
+06:34.250 --> 06:45.430
+And we have all of the language features supported that's up to and including I think in a way, which is new in five and three five uh will highlight those probably and give you the right intellisense when you use those?
+
+06:45.790 --> 06:52.810
+Ah, well, although all the different features role of the language and so it's had quite an evolution and yeah, the the two and three sweat.
+
+06:54.050 --> 06:57.330
+Still, hurting us a little bit still heading that the pie from India.
+
+06:57.670 --> 07:11.720
+It's a shame Ah, but we are definitely thing to mention towards people focusing on titan three pan and moving forward with the supported versions, so that's awesome. So let me ask a couple of questions that because I've I've used python a quite a bit.
+
+07:12.170 --> 07:47.750
+Some there's some libraries in python that will spin up windows that will show you like rafts for example, is that is that something that supported I mean, if it's just like that no story? Where we're just we're paying in the bottom at in a fight on running, yeah, so, so everything that we ran in three visual Studio is just using the usual tools. I mean that the tools that are out there for five and a great that widely used widely adopted very popular and if we were something you nobody would want to use it. You know they like I've got this existing better try. So yeah, we work on top of that Matt Parkman had you know a central place you know, interactive experience for displaying graph.
+
+07:48.190 --> 08:16.580
+Ah hit is Janet package management Oh, yeah, and so we layer on top of that with you know will show you everything you've got installed will let you search. The online deposit trees from within Visual Studio and it's all just going through the standard tooling so if you do need to jump out the command line. You can do that and it doesn't interfere on mess with anything by just typing. The command foyer. The other question. I have for you, it in notice pretty clear what javascript file your starting right there's like I don't know what is server today uh Sir?
+
+08:17.780 --> 08:37.150
+I mean, it's right like is it yeah, everything if it's a particular like everything expressed top there's a very specific way to start down. Yeah, there. There's some complications when you get into there a lot of filesystemwatcher is things. Uh like no non and stuff like that uh but over all there is a single point of entry in Python, there really isn't.
+
+08:37.970 --> 09:27.400
+Well, I I again, it's very flexible language. Uh and people have different needs different requirements. So if there's a lot of card. That does stop from just a plain old pipe and file and when you're inside visual studio. You can right click that and say make this the one that's going to start off when they should have thought that was the question like? How do you say what's a startup thought and that's what we started with his being able to change that in the feedback we got very early on, said I keep switching all the time, like I mean, this file and I just want to run this one right now, so you can right click anywhere in the file and they thought this file right now with the ball go without the ball go out wherever you happen to be you know, I need to switch shouldn't hit at five so we brought the commands front and center in every single passing by and that's awesome right because I I with with expressed there was there. Some clarity you're right that there's other things around, but I thought I could have fifteen python wild.
+
+09:27.520 --> 10:17.530
+At all do so because when I did research right when you do research coated it's ugly people don't ever show your resource or anybody. I would have maybe ten or fifteen files and I would be experimenting on a number of different things. You're saying I can go to any file right click. They run this well. Yeah, an anime in fifteen files sounds like a very small research project. Yeah, I remember some of mine had. I I had many more by the house in my I try to be is not as ugly as possible, but it turned out, it was ugly, Yeah, at some point you just need to get something done. There's no matter how it looks so she other question I have is your sheets, she talked about running nodes. A us in debug mode. I wasn't aware that there was such a thing for python. He talk about how you can actually do break like short supplies and doesn't have a debug mode. As such, but there is a function you can call that sets up a trace functions.
+
+10:17.530 --> 10:33.790
+So essentially you can write a python function and then get that to be triggered on every single time we get to the next line of code and there's a few other events in again. Spring it on, but essentially every time I can get the next line of code. It will call that function and say, I'm at this line of code in this file.
+
+10:34.230 --> 11:24.240
+And then we forgot about the bug us about the buggers purify sin card works on any platform. You can run out the bugger on Windows Linux or Mac and debug it from visual studio remotely because it feels. I think I'd to debug. Oh, we get cold and so that if you set a break point on that line. We just hold it there. We just go into a holding would where we can inspect variables, sending back through the visual studio. Ida right and when you say continue then we return and it just keeps going naturally so that's how you feel like I was? How did you solve the debugging issue in Python, it that's really clever I did not know that that was built in so it is it? How do you look into that trace function is I mean it develop right and they were visual studio Ah sorry we do that through Visual Studio just by running a little bit. If I think right before we start your your actual project and it's just a pipe and function called possibly more in.
+
+11:24.240 --> 11:53.510
+Sing one so one thing that we support enticing that is unique. Visual Studio is if you have a native see module that you compiled and you're using from height, then we actually have makes my debugging and this is one about unique features in Visual Studio will let you step through python code when it calls in to see you jump into the sea module. You can hover over variables in either one even knew much in the same module. It'll show you the parts and object and if they were in python code. You can see the sea objects from the piping heard as if they're in see.
+
+11:53.880 --> 12:43.720
+And the way we did that is slightly different. That's using the standard native to bug up and we threw some interpretation so we see all these in the pipes and internal sack frame sale. It's translating always make them look like bison frames so when you look in the sack window. You see see see fighting fighting fighting fighting see see parts. You can jump to any of those variables in any of those so that's a different approach to the normal cross platform. One and only works on windows, but it works great. We we know a number of really big cool companies that love using five until some visual shooter because they can do that. And for those who don't know can you explain what? What do you mean by their see cold in some python stuff I mean I I understand why would you tell us why she also so you see five and is an interpreted language you, you start running the cardan it compiles an into a bike.
+
+12:43.980 --> 12:56.190
+And then it runs through an interpreter would which means you're doing a lot of operations that can it can be for something since the inherent nature of you want to spend a lot of time, compiling and then we can run. We don't spend much time, compiling its way around? Yeah.
+
+12:56.600 --> 13:07.270
+Ah and so the way people think that it's like taking the really important parts of that card and writing them and see all converting them to see an compiling them. So it's already done and then they run really fast.
+
+13:07.930 --> 13:30.070
+But then you lose a lot of the night five and pages. You don't get the bottom level debugging you can inspect very wasn't days where you need to see the ball go right, and luckily visual studio has probably the best scene. The bugger out there and so we take that and we give you that when you're in say inside bison card and also make it so the piping heard is as nice to use as it would be in a regular patentable that's amazing.
+
+13:30.480 --> 13:41.810
+I like I'm excited for both both know Jay Uh and high tides. We about ninety seconds. Black can you tell me where we can go just sorta get started? I know you mention it but let's call him out again.
+
+13:42.400 --> 13:53.670
+There is akas dot and then watch and TVs uh uh uh uh to get the no tooling for Visual Studio Huh. There's a kid and that's last few TVs to get the python tools.
+
+13:54.190 --> 14:05.210
+And then there's also Co dot visual studio dot com get yes. Can I I? I know where we kind of got like a minute left? Do all these things also working V.s. code for python and for for no jobs.
+
+14:05.640 --> 14:08.220
+I know for no j****** is a sorry little bit better right.
+
+14:08.990 --> 14:37.290
+It's in visual studio kind, it is yeah, it's it's in your thing we've got more engineering work to get into the bring those up to the parity. If we can even get some that parity certainly uh no chances further along in in Visual Studio code developing know Jay Yes. So when the developers are working on it, and say this is a very good. I'll just go and fix it. You know if we had been developed is using it, then I'm sure 500 be up to there as well. But Unfortunately, it's not A. The community is really picking that also it's a great part and extension already out there that.
+
+14:37.700 --> 15:04.850
+That someone in the community is written for the Asgard so we're really excited to see the community come in and say you know, we want I can support waking to make it happen. Whether Microsoft does it or not so well. This is awesome. I love seeing how visual studio is actually using all of the language is right in with a new visual studio installing only the things that target watch you need. I think it's really great, thanks so much for spending some time with us again. We're here in San Francisco for Bill Twenty. Sixteen thanks for watching you next time.
