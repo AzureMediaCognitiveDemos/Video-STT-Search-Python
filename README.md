@@ -1,7 +1,7 @@
 # Video-STT-Search
 Video Speech-to-Text and Search Samples
 
-![Screenshot Video STT Search](https://raw.githubusercontent.com/AzureMediaCognitiveDemos/Video-STT-Search/master/img/screenshot-video-stt-demo.jpg)
+![Screenshot Video STT Search](https://raw.githubusercontent.com/AzureMediaCognitiveDemos/Video-STT-Search-Python/master/img/screenshot-video-stt-demo.jpg)
 
 Demo: [http://aka.ms/amcdemo_videostt](http://aka.ms/amcdemo_videostt)
 
@@ -54,4 +54,4 @@ WORKFLOW : ALL|GEN_CC|SEARCH_UPLOAD
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/AzureMediaCognitiveDemos/Video-STT-Search.
+Bug reports and pull requests are welcome on GitHub at https://github.com/AzureMediaCognitiveDemos/Video-STT-Search-Python.
