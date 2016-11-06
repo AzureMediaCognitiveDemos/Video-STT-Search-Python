@@ -16,11 +16,11 @@ You have to create the following Azure services accounts and configure the files
 | Azure Media Services          | ams.conf       |
 | Azure Search                  | search.conf    |
 
-### 1-2. Create Azure Search Index for OCR text search
+### 1-2. Create Azure Search Index for STT text search
 You have to create index schema to index digital text that were generated from Speech-to-Text processing of the video by Azure Media Indexer2. There is a scritp for creating index schema.
 
 ```
-# run this if OCR text is English
+# run this if text is English
 ./create_stt_schema_en.sh
 ```
 
