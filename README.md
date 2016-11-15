@@ -24,6 +24,25 @@ You have to create index schema to index digital text that were generated from S
 ./create_stt_schema_en.sh
 ```
 
+### 1-3. Setup Azure Media Processors Modules
+Please install maven and git if not yet installed on your environment
+```
+# for Ubuntu/Debian
+sudo apt-get install git
+sudo apt-get install maven
+
+# for CentOS
+sudo yum install git
+sudo yum install maven
+```
+
+Check out github repo and build the module in order to make it ready for batch execution
+```
+cd mediaprocessors
+./setup.sh
+```
+
+
 ## 2. Batch execution
 
 ### run-batch command Usages
